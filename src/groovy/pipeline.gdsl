@@ -2,6 +2,8 @@ package groovy
 
 def ctx = context(filetypes: ["groovy"])
 contributor(ctx) {
+  method(name: 'dockerNode', type: 'Object', params: [image:java.lang.String, body:'Closure'], doc: 'Docker Node (\u26A0\uFE0F Experimental)')
+  method(name: 'dockerNode', type: 'Object', params: [body:Closure], namedParams: [parameter(name: 'image', type: 'java.lang.String'), parameter(name: 'connector', type: 'Map'), parameter(name: 'credentialsId', type: 'java.lang.String'), parameter(name: 'dockerHost', type: 'java.lang.String'), parameter(name: 'remoteFs', type: 'java.lang.String'), ], doc: 'Docker Node (\u26A0\uFE0F Experimental)')
   method(name: 'parallel', type: 'Object', params: ['closures': 'java.util.Map'], doc: 'Execute in parallel')
   method(name: 'parallel', type: 'Object', namedParams: [parameter(name: 'closures', type: 'java.util.Map'), parameter(name: 'failFast', type: 'boolean'),], doc: 'Execute in parallel')
   method(name: 'build', type: 'Object', params: [job: 'java.lang.String'], doc: 'Build a job')
