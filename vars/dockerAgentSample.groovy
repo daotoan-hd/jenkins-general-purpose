@@ -1,5 +1,5 @@
 def call() {
-    new dockerAgentWrapper(run())
+    new dockerAgentWrapper(run)
 }
 
 def run() {
