@@ -1,10 +1,12 @@
+import groovy.transform.Field
+
 def call() {
     dockerAgentWrapper {
         run
     }
 }
 
-def run = {
+@Field run = {
     stage("Test") {
         sh "ansible --version"
     }
