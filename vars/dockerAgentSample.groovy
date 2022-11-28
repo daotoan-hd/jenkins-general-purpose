@@ -2,7 +2,7 @@ import groovy.transform.Field
 
 def call() {
 
-    def body = { run() }
+    def body = { this.run() }
 
     dockerAgentWrapper {
         body
