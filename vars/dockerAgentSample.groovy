@@ -1,16 +1,16 @@
 import groovy.transform.Field
 
 def call() {
-    def run = {
-        stage("Test") {
-            sh "ansible --version"
-        }
-    }
+
+    def body = { run() }
 
     dockerAgentWrapper {
-        stage("Test") {
-            sh "ansible --version"
-        }
+        body
     }
 }
 
+def run() {
+    stage("Test") {
+        sh "ansible --version"
+    }
+}
