@@ -8,7 +8,9 @@ def call() {
     }
 
     dockerAgentWrapper {
-        run
+        stage("Test") {
+            sh "ansible --version"
+        }
     }
 }
 
