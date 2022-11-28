@@ -3,6 +3,6 @@ import dev.ops.path.cicd.tool.Git
 
 def call(body) {
     dockerNode(image: 'daotoanhd/devopstools:1.0.0') {
-        body()
+        body.run()
     }
 }
