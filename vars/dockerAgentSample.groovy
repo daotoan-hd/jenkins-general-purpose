@@ -8,9 +8,7 @@ def call() {
 }
 
 def execute() {
-    return {
-        stage("Test") {
-            sh "ansible --version"
-        }
+    stage("Test") {
+        sh "ansible --version"
     }
 }
